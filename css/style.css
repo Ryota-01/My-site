@@ -1,0 +1,351 @@
+@charset'utf-8';
+
+html {
+  font-size: 16px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  background: #fff;
+  font-size: 16px;
+}
+ul {
+  margin: 0;
+  padding-inline-start: 0;
+}
+.wrapper {
+  max-width: 900px;
+  padding: 0 4%;
+  margin-bottom: 140px;
+  margin: 0 auto 140px auto;
+}
+h2 {
+  width: fit-content;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-bottom: 3px solid #C8A08C;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  letter-spacing: 0.25rem;
+  margin-top: 140px;
+  margin-bottom: 90px;
+  color: #505050;
+}
+h2::before {
+  content: '　';
+}
+h2::after {
+  content: "　";
+}
+section {
+  padding: 5px;
+}
+.comments {
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+}
+.animate {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity .3s, transform .3s;
+}
+.animate.appear {
+  opacity: 1;
+  transform: none;
+}
+/* -----------------------------------
+Header
+----------------------------------- */
+#header {
+  width: 100%;
+}
+nav #pc-nav {
+  display: flex;
+  padding: 30px;
+  color: #fff;
+  font-weight: bold;
+  position: fixed;
+  right: 0;
+  z-index: 20;
+}
+nav #pc-nav li {
+  margin-left: 30px;
+  transition: color 0.5s;
+  letter-spacing: 0.2rem;
+}
+nav ul li:hover {
+  color: #C8A08C;
+}
+
+nav #sp-navigation li {
+  padding: 12px;
+  width: fit-content;
+  margin: 0 auto;
+}
+#header #sp-navigation {
+   /*------ディスプレイを表示させるClass------*/
+  position: fixed;
+  top: -200px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(70, 70, 70, 0.6);
+  color: white;
+  text-align: center;
+  padding: 16px 0;
+  font-size: 1.1rem;
+  transition: .3s;
+}
+#hamburger-icon-area img {
+  display: none;
+}
+
+/* -----------------------------------
+Heroエリア
+----------------------------------- */
+#hero::before {
+  text-align: center;
+  background-image: url('../img/main.jpg');
+  background-color: rgba(255, 255, 255, 0.4);
+  background-blend-mode: soft-light;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  content: '';
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+#hero h1 {
+  font-size: 1.625rem;
+  font-weight: bold;
+  letter-spacing: 0.6rem;
+  color: #fff;
+  filter: drop-shadow(0 0 15px #000);
+}
+#hero .head-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#hero h1 span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+/* -----------------------------------
+ABOUT
+----------------------------------- */
+#about {
+  padding-bottom: 90px;
+  position: relative;
+}
+#about::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #f4f3f0;
+  z-index: -1;
+  vertical-align: middle;
+}
+#about .text {
+  font-size: 0.8rem;
+  width: 85%;
+  margin: 0 auto;
+  line-height: 1.75;
+  letter-spacing: 0.2rem;
+}
+#about .text p + p {
+  margin-top: 30px;
+}
+#about .text p span {
+  font-weight: bold;
+}
+#about .sns-icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+}
+#about .sns-icon li {
+  padding: 0 2%;
+}
+#about .sns-icon li img {
+  width: 30px;
+}
+/* -----------------------------------
+Production
+----------------------------------- */
+#production {
+  position: relative;
+}
+#production::before {
+  content: '';
+  position: absolute;
+  top: -70px;
+  bottom: -70px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  transform: skewY(-6deg);
+  z-index: -1;
+}
+.works-img {
+  width: 100%;
+}
+.works-img ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.works-img li {
+  width: 50%;
+  padding: 2% 2% 18% 2%;
+}
+.works-img iframe,
+.works-img img {
+  width: 100%;
+  height: 75%;
+  transition: opacity .3s;
+  border: 5px solid #fff;
+  box-sizing: border-box;
+  object-fit: cover;
+  filter: drop-shadow(0 2px 9px pink);
+}
+.works-img .title-box {
+  font-size: 0.8rem;
+  margin-top: 3%;
+  padding-left: 5%;
+  letter-spacing: 0.1rem;
+}
+.works-img .title-box p:nth-child(1) {
+  font-weight: bold;
+  line-height: 1.1rem;
+  padding: 2% 0;
+  color: #a28d69;
+  /* line-height: 1.4rem; */
+}
+.works-img iframe:hover {
+  opacity: .8;
+}
+/* -----------------------------------
+Diary
+----------------------------------- */
+#diary {
+  position: relative;
+}
+#diary::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: -2;
+}
+#diary dl {
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 0.4rem;
+}
+#diary dt {
+  display: inline-block;
+  border-bottom: 1px solid #c8a08c;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  font-weight: normal;
+}
+#diary dt::before {
+  content: '　';
+}
+#diary dt::after {
+  content: '　';
+}
+#diary dd {
+  padding: 10px 0;
+  margin-bottom: 70px;
+}
+.btn {
+  display: block;
+  margin: 0 auto;
+  letter-spacing: 0.3rem;
+  padding: 20px 40px;
+  border: 2px solid #c8a08c;
+  color: #c8a08c;
+  font-weight: bold;
+  font-size: 14px;
+}
+/* -----------------------------------
+Contact
+----------------------------------- */
+#contact {
+  position: relative;
+}
+#contact::before {
+  content: '';
+  position: absolute;
+  top: -70px;
+  bottom: -70px;
+  left: 0;
+  right: 0;
+  background: #f4f3f0;
+  transform: skewY(6deg);
+  z-index: -1;
+}
+form {
+  display: block;
+  max-width: 600px;
+  margin: auto;
+}
+
+#contact p {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  letter-spacing: 0.2rem;
+}
+#contact p + input + p {
+  margin-top: 60px;
+}
+input,
+textarea {
+  width: 100%;
+  background: #ffffff;
+  padding: 30px;
+  font-size: 0.9rem;
+}
+.form-btn {
+  width: auto;
+  display: block;
+  padding: 20px 60px;
+  background: #c8a08c;
+  text-align: center;
+  margin: 60px auto 0 auto;
+  color: #ffffff;
+  letter-spacing: 0.25rem;
+  font-weight: bold;
+}
+.required {
+  font-size: 12px;
+}
+.requiredpart {
+  font-size: 12px;
+}
+/* -----------------------------------
+Footer
+----------------------------------- */
+#footer {
+  text-align: center;
+  background: #1e1e1e;
+  padding: 90px 0;
+  color: #ffffff;
+}

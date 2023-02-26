@@ -1,0 +1,76 @@
+/* -----------------------------------
+スマホ用
+----------------------------------- */
+@media screen and (max-width:650px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  #hero::before {
+    background-position-x: 35%;
+  }
+  #header #pc-nav {
+    display: none;
+  }
+  #hamburger-icon-area { /*-------ハンバーガーメニュー--------*/
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    cursor: pointer;
+  }
+  #hamburger-icon-area img {
+    width: 75%;
+    display: block;
+  }
+  #hamburger-icon-area #close-icon {
+    display: none;
+  }
+  #hamburger-icon-area .icon-none {
+    display: none;
+  }
+  #hamburger-icon-area #close-icon.icon-active {
+    display: block;
+  }
+
+  #header #sp-navigation.display-open {
+    position: fixed;
+    top: 0;
+  }
+  
+  /* -----------------------------------
+  ABOUT
+  ----------------------------------- */
+  #about {
+    width: 100%;
+  }
+
+  #about .text {
+    width: 100%;
+  }
+
+  /* -----------------------------------
+  Works
+  ----------------------------------- */
+  .works-img ul {
+    font-size: 0.8rem;
+    display: block;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .works-img li {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .works-img iframe {
+    height: 50%;
+  }
+
+}
